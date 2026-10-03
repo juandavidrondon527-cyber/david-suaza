@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utilidades | David Suaza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pantalla de introducción: solo el logo -->
+  <div id="splash">
+    <svg class="logo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="100%" stop-color="#a78bfa"/>
+        </linearGradient>
+      </defs>
+      <circle class="anillo" cx="200" cy="170" r="140" fill="none" stroke="url(#grad)" stroke-width="10"/>
+      <text class="iniciales" x="200" y="214" text-anchor="middle" font-size="120" font-weight="800" fill="url(#grad)" font-family="Georgia, serif">DS</text>
+      <text class="nombre" x="200" y="370" text-anchor="middle" font-size="40" letter-spacing="10" fill="#e2e8f0" font-family="Poppins, Arial, sans-serif">DAVID SUAZA</text>
+    </svg>
+  </div>
+
+  <!-- Marca de agua de fondo -->
+  <div class="marca" aria-hidden="true">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="170" r="140" fill="none" stroke="currentColor" stroke-width="8"/>
+      <text x="200" y="214" text-anchor="middle" font-size="120" font-weight="800" fill="currentColor" font-family="Georgia, serif">DS</text>
+    </svg>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="contenido">
+    <header>
+      <div class="brand">
+        <span class="brand-logo">DS</span>
+        <span class="brand-nombre">David Suaza</span>
+      </div>
+      <span class="etiqueta">Panel de utilidades</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Herramientas <span>rápidas</span> y precisas</h1>
+        <p>Calcula propinas, tu índice de masa corporal y más, en segundos.</p>
+      </section>
+
+      <section class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono">💵</div>
+          <h2>Calculadora de propina</h2>
+          <p>Ingresa el monto de la cuenta y el porcentaje para ver propina y total.</p>
+          <button onclick="calcularPropina()">Calcular</button>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">⚖️</div>
+          <h2>Clasificador de IMC</h2>
+          <p>Calcula tu IMC y conoce tu categoría según la OMS.</p>
+          <button onclick="clasificarIMC()">Clasificar</button>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">🧰</div>
+          <h2>Menú de utilidades</h2>
+          <p>°C a °F, precio con IVA y conversión de nota a letra.</p>
+          <button onclick="menuUtilidades()">Abrir menú</button>
+        </article>
+      </section>
+
+      <section class="visor-caja">
+        <div class="visor-barra">
+          <span class="punto"></span><span class="punto"></span><span class="punto"></span>
+          <span class="visor-titulo" id="visorTitulo">Visor</span>
+        </div>
+        <div class="visor" id="visor">Elige una herramienta para comenzar…</div>
+      </section>
+    </main>
+
+    <footer>© 2026 David Suaza · Todos los derechos reservados</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
